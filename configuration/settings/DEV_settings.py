@@ -55,7 +55,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, '../../templates')
+            os.path.join(BASE_DIR, '../templates')
         ]
         ,
         'APP_DIRS': True,
@@ -146,9 +146,9 @@ LOGGING = {
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "../static"),)
 
-# Django Rest Framework auth configuration
+# Django Rest Framework configuration
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
@@ -157,3 +157,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ),
 }
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 20
+}
+
+# newsapi.org.key - copy your key here
+NEWSAPI_KEY = 'af92652e76b745a6bde8dd2fc5739bfd'

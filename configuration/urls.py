@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^$', RedirectView.as_view(pattern_name='crawler_article_list')),
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^crawler/', include(crawler_urls))
+    url(r'^crawler', include(crawler_urls))
 ]

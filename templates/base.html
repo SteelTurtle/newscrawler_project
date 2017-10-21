@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>
         {% block title %}
-            Django Store
+            NewsAPI.org Crawler
         {% endblock %}
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -26,17 +26,17 @@
 <div class="container"><!-- container -->
 
     <header class="row">
-        <div class="offset-by-one ten columns">
-            <h1>News Crawler</h1>
+        <div class="offset-by-four ten columns">
+            <h1><b>News Crawler</b></h1>
         </div>
     </header>
     <nav>
         <ul>
             <li>
-                <a href="{% url 'news_list' %}">
+                <a href="{% url 'crawler_article_list' %}">
                     Get the latest news from newsapi.org (HTML)</a></li>
             <li>
-                <a href=" {% url 'json_news_list' %} ">
+                <a href=" {% url 'crawler_article_jsonlist' %} ">
                     Get the latest news from newsapi.org (JSON)</a></li>
         </ul>
     </nav>
