@@ -1,0 +1,41 @@
+{% extends parent_template|default:"" %}
+
+{ % block title % }
+{{ block.super }} - Latest News
+{ % endblock title % }
+
+{% block org_content %}
+    <h2>Latest News from newsapi.org</h2>
+    <ul>
+        {% for article in news_list %}
+            <li>
+                <a href="{{ article.get_absolute_url }}">{{ article.title }} </a>
+            </li>
+        {% empty %}
+            <li><em>No news available</em></li>
+        {% endfor %}
+    </ul>
+{% endblock org_content %}
+
+{% block content_footer %}
+    {% if is_paginated %}
+        <ul>
+            {% if previous_page_url %}
+                <li>
+                    <a href="{{ previous_page_url }}">
+                        Previous</a>
+                </li>
+            {% endif %}
+            <li>
+                Page {{ page_obj.number }}
+                of {{ paginator.num_pages }}
+            </li>
+            {% if next_page_url %}
+                <li>
+                    <a href="{{ next_page_url }}">
+                        Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    {% endif %}
+{% endblock content_footer %}
