@@ -163,4 +163,4 @@ REST_FRAMEWORK = {
 }
 
 # newsapi.org.key - copy your key here
-NEWSAPI_KEY = 'af92652e76b745a6bde8dd2fc5739bfd'
+NEWSAPI_KEY = ''
