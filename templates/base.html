@@ -26,19 +26,18 @@
 <div class="container"><!-- container -->
 
     <header class="row">
-        <div class="offset-by-four ten columns">
+        <div class="twelve columns">
             <h1><b>News Crawler</b></h1>
         </div>
     </header>
     <nav>
-        <ul>
-            <li>
-                <a href="{% url 'crawler_article_list' %}">
+        <div class="twelve columns">
+            <a href="{% url 'crawler_article_list' %}" class="button button-primary">
                     Get the latest news from newsapi.org (HTML)</a></li>
-            <li>
-                <a href=" {% url 'crawler_article_jsonlist' %} ">
+
+            <a href=" {% url 'crawler_article_jsonlist' %}" class="button button-primary">
                     Get the latest news from newsapi.org (JSON)</a></li>
-        </ul>
+        </div>
     </nav>
     {% if messages %}
 
@@ -63,12 +62,17 @@
             This is default content!
         {% endblock %}
     </main>
+
 </div><!-- container -->
 
 <footer>
-    <p>
-        &copy; 2017 Gorilla Corporation
-    </p>
+    <div class="row">
+        <div class="twelwe columns">
+
+            &copy; 2017 Gorilla Corporation
+
+        </div>
+        <div>
 </footer>
 
 </body>
