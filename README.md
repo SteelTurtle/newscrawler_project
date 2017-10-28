@@ -4,7 +4,7 @@ A super simple newsfeed with support for ReST, made with django 1.11
 NewsCrawler is a small toy-app primarily made to experiment various features of the Django Rest Framework.
 The app implements a basic ReST client fetching news (in Json format) from random sources located at https://newsapi.org/
 
-The app retrieves the newsapi newsfeed every time the user initiates a GET request to the home page.
+The app retrieves the newsapi.org newsfeed every time the user initiates a GET request to the home page.
 The news received by the feed are saved to the local database only if they were not already there; (the app compare
 the title of the news downloaded with those in the DB to determine what to do).
 
