@@ -39,28 +39,11 @@
                     Get the latest news from newsapi.org (JSON)</a></li>
         </div>
     </nav>
-    {% if messages %}
 
-        <div class="row">
-            <div class="twelwe columns">
-                <ul class="messages">
-                    {% for message in messages %}
-                        {% if message.tags %}
-                            <li class="{{ message.tags }}">
-                                {% else %}
-                            <li>
-                        {% endif %}
-                    {{ message }}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    {% endif %}
     <main>
         {% block content %}
             This is default content!
-        {% endblock %}
+        {% endblock content %}
     </main>
 
 </div><!-- container -->

@@ -4,11 +4,11 @@
 {{ block.super }} - Latest News
 { % endblock title % }
 
-{% block content %}
+{% block crawler_content %}
     <h2><b><i>*Latest News from newsapi.org*</i></b></h2>
-    <div>
-        <ul>
-            {% for article in articles %}
+    <div class="mobile">
+        <ul class="pagination">
+            {% for article in articles_list %}
                 <li>
                     <h3>{{ article.title }} </h3>
                 </li>
@@ -23,11 +23,10 @@
             {% endfor %}
         </ul>
     </div>
-{% endblock content %}
 
-{% block content_footer %}
+
     {% if is_paginated %}
-        <ul class="pagination">
+        <ul>
             {% if previous_page_url %}
                 <li>
                     <a href="{{ previous_page_url }}">
@@ -35,7 +34,7 @@
                 </li>
             {% endif %}
             <li>
-                Page {{ page_obj.number }}
+                Page {{ articles_list.number }}
                 of {{ paginator.num_pages }}
             </li>
             {% if next_page_url %}
@@ -46,4 +45,4 @@
             {% endif %}
         </ul>
     {% endif %}
-{% endblock %}
+{% endblock crawler_content %}

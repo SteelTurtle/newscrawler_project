@@ -1,1 +1,10 @@
 {% extends parent_template|default:"base.html" %}
+
+{% block content %}
+    <div class="row">
+        <section class="twelve columns">
+            {% block crawler_content %}
+                This is default content!
+            {% endblock crawler_content %}
+        </section>
+{% endblock content %}
